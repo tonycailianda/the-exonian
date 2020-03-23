@@ -13,6 +13,8 @@
 		C83CA65E2428288900314B79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83CA65C2428288900314B79 /* Main.storyboard */; };
 		C83CA6602428288A00314B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83CA65F2428288A00314B79 /* Assets.xcassets */; };
 		C83CA6632428288A00314B79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83CA6612428288A00314B79 /* LaunchScreen.storyboard */; };
+		C83CA66B24282F2000314B79 /* TopNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA66A24282F2000314B79 /* TopNewsViewController.swift */; };
+		C83CA66D2428349F00314B79 /* TopNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA66C2428349F00314B79 /* TopNewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C83CA65F2428288A00314B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C83CA6622428288A00314B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C83CA6642428288A00314B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C83CA66A24282F2000314B79 /* TopNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsViewController.swift; sourceTree = "<group>"; };
+		C83CA66C2428349F00314B79 /* TopNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C83CA65F2428288A00314B79 /* Assets.xcassets */,
 				C83CA6612428288A00314B79 /* LaunchScreen.storyboard */,
 				C83CA6642428288A00314B79 /* Info.plist */,
+				C83CA66A24282F2000314B79 /* TopNewsViewController.swift */,
+				C83CA66C2428349F00314B79 /* TopNewsCell.swift */,
 			);
 			path = "The Exonian";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83CA65B2428288900314B79 /* ViewController.swift in Sources */,
+				C83CA66D2428349F00314B79 /* TopNewsCell.swift in Sources */,
+				C83CA66B24282F2000314B79 /* TopNewsViewController.swift in Sources */,
 				C83CA6572428288900314B79 /* AppDelegate.swift in Sources */,
 				C83CA6592428288900314B79 /* SceneDelegate.swift in Sources */,
 			);
