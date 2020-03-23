@@ -7,32 +7,104 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Search-->
         <scene sceneID="xz3-yH-Ym4">
             <objects>
-                <viewController id="inC-QE-2hy" sceneMemberID="viewController">
+                <viewController id="inC-QE-2hy" customClass="SearchViewController" customModule="The_Exonian" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIJ-yO-2qy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar opaque="NO" contentMode="redraw" fixedFrame="YES" text="" placeholder="Find it on Exonian..." showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-Ag-IYY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Recent Searches / 14932 results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-v3-wcV">
+                                <rect key="frame" x="0.0" y="56" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86634083615377988" green="0.86938597554056107" blue="0.87852139370090465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mhE-e0-n2R">
+                                <rect key="frame" x="0.0" y="104" width="414" height="621"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="135" id="E9U-gB-3Zc" customClass="SearchTableViewCell" customModule="The_Exonian" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E9U-gB-3Zc" id="u7i-6W-Bec">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't Sacrifice Experiences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfh-5E-3od">
+                                                    <rect key="frame" x="20" y="11" width="288" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jfl-Qf-x2H">
+                                                    <rect key="frame" x="20" y="40" width="363" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="March 23, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6A-sj-TmZ">
+                                                    <rect key="frame" x="20" y="110" width="103" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twx-pB-BOl">
+                                <rect key="frame" x="370" y="66" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Vow-o1-CJb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="LZx-Cf-iM9"/>
+                    <navigationItem key="navigationItem" title="Search" id="8md-qk-XId"/>
+                    <connections>
+                        <outlet property="SearchBar" destination="Xwl-Ag-IYY" id="yu3-RQ-svz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgr-C8-kgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1135" y="279"/>
+            <point key="canvasLocation" x="-1186.9565217391305" y="278.57142857142856"/>
         </scene>
-        <!--Top News View Controller-->
+        <!--Explore-->
         <scene sceneID="hRh-iH-Mvy">
             <objects>
                 <viewController id="AEm-Xh-Hxk" customClass="TopNewsViewController" customModule="The_Exonian" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9X9-KL-nLU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbL-ix-gMm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="431" id="tQD-T1-pJF" customClass="TopNewsCell" customModule="The_Exonian" customModuleProvider="target">
@@ -43,27 +115,35 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0G-fp-TPW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="262"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tgb-TD-MGM">
-                                                    <rect key="frame" x="12" y="259" width="240" height="128"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Breaking News" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w2o-bt-Dm3">
+                                                    <rect key="frame" x="0.0" y="259" width="414" height="131"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="backgroundColor" red="0.77057472490000001" green="0.25208527120000002" blue="0.20151315989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" red="0.83474737409999999" green="0.1935671568" blue="0.1607012451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FT9-HO-fQT">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iI5-BF-W7n">
                                                     <rect key="frame" x="375" y="398" width="19" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="square.and.arrow.up" catalog="system"/>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YP-B6-W8Z">
+                                                    <rect key="frame" x="340" y="398" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="star" catalog="system"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="collect" destination="9YP-B6-W8Z" id="YXv-eh-4vD"/>
+                                            <outlet property="share" destination="iI5-BF-W7n" id="X35-lN-Z7e"/>
                                             <outlet property="topNewsImage" destination="R0G-fp-TPW" id="co1-n3-Xzl"/>
-                                            <outlet property="topNewsText" destination="Tgb-TD-MGM" id="4k9-qS-twg"/>
+                                            <outlet property="topNewsText" destination="w2o-bt-Dm3" id="eum-6a-87j"/>
                                             <segue destination="g0U-TB-fjq" kind="show" id="uma-cw-ICv"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,60 +163,320 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W0h-0y-cug"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ObT-a0-gd2"/>
+                    <navigationItem key="navigationItem" title="Explore" id="ObT-a0-gd2"/>
                     <connections>
                         <outlet property="topNewsTableView" destination="vbL-ix-gMm" id="iNb-YC-VEQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPW-gT-0PM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918.84057971014499" y="-567.1875"/>
+            <point key="canvasLocation" x="1856.521739130435" y="-545.08928571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--News Article View Controller-->
         <scene sceneID="8ic-sM-ewA">
             <objects>
-                <viewController id="g0U-TB-fjq" sceneMemberID="viewController">
+                <viewController id="g0U-TB-fjq" customClass="NewsArticleViewController" customModule="The_Exonian" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L36-45-OGW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLj-JF-HTs">
+                                <rect key="frame" x="20" y="20" width="52" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mar 18 - Written By Exeter Exonian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-7K-n4O">
+                                <rect key="frame" x="20" y="154" width="291" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pam-Em-uVY">
+                                <rect key="frame" x="28" y="183" width="366" height="3699"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">In response to COVID-19 pandemic, Principal William Rawson emailed a video announcement cancelling all on-campus classes for the Spring Term. All courses will be delivered online and students will receive a pass/no pass evaluation for their work. 
+
+According to Rawson’s video, seniors will still assemble on campus in June for commencement. Regardless of whether students can ultimately return to campus, the senior class will graduate on time. Rawson allowed for the possibility of students returning to campus if the global health crisis improves.
+
+Faculty members from all departments began discussing how to modify their curriculums for remote instruction in late January, although the bulk of the course planning is taking shape over spring break. “As the situation deteriorated in the U.S. and abroad, the planning began to take on more shape and the possibility of holding online for a longer period of time for all students began to evolve,” Dean of Students Brooks Moriarity said.
+
+Following Rawson’s announcement, Moriarty sent students and their families logistical details about the Academy’s e-learning plan. For the Spring term, the Academy will follow a new schedule, with classes beginning at 9 a.m. and ending at 4:15 p.m. Each course will have three blocks a week, with two 45 minute blocks and one 90 minute block, and Advising will take up two 45 minute blocks. Instructors will also be required to be available during designated Office Hours, when students may request conferences or additional assistance.
+
+Given the sizable international student population on campus, the Academy’s plan accommodates those in various time zones. 
+
+“We know that students may not be able to be present at all of the class meeting times listed,” Moriarty wrote in his email. “Students are required to have three ‘touchpoints’ for each course per week.” Such touchpoints are synchronous classes, one-on-one conferences or “engagement with or contribution to a class activity at a time of the student’s choice, other than the scheduled class time.”
+
+The nightly homework allotment will also change during the spring term. All classes will assign a maximum of one hour of homework per night in the first two weeks. Afterwards, each cours will have a maximum of one hour and twenty minutes of homework per night. 
+
+In the initial stages of planning, the administration anticipated having online instruction for students who might not be able to return to campus. 
+
+“At that point in time, we did not know the virus’ impact, but we were concerned that some students would be unable to return to campus… Before, we were thinking about hybrid classes with some students on campus and others off campus,” Dean of Academic Affairs Laura Marshall said. 
+
+However, as the number of coronavirus cases grew, plans altered to accommodate remote learning for all students. “When the decision was made that students would not return on March 22nd, the planning process changed,” Marshall said. 
+
+Assistant Principal Karen Lassey noted that April 13 was chosen as an initial return date to provide faculty and students proper time to spend with family, adjust to online classes and prepare for travel back to campus. “[T]he date also kept open the possibility of resuming on-campus classes, in the event that the COVID-19 situation allowed it,” Lassey said.
+
+Still, administrators found the risk too great to allow classes to resume on campus. 
+
+“As eager as we are to have our students return to their classes, practices, rehearsals, and friends, we cannot do that until we are sure it is safe for them and all members of our community,” Rawson wrote in his most recent email. “Since ours is a residential community, the choices each of us makes may have serious implications for others and we are mindful of our responsibility not to contribute to community spread.”
+
+Moriarty affirmed the commitment campus adults have to fostering a positive learning experience. 
+
+“We urge you to communicate with your adviser, teachers, deans, or other adults with any questions or concerns. And we urge you to take care of yourselves and look out for the well-being of your peers as we move forward with this shared venture,” he wrote. “Be kind. Be respectful. Be patient with others and with yourselves. Use the many resources at your disposal.”
+
+Even before the Administration announced the postponement of Spring Term, the rapid spread of the coronavirus had greatly affected student travel plans. For senior Morgan LeBrun, the global situation cancelled a long-awaited trip with her friends. Planning from as far back as prep year, Lebrun and her close friends finalized their itinerary to Turks and Caicos months ago. After discussing closely with her friends, “we decided it was in everybody's best interest to cancel our trip and practice social distancing,” Lebrun said. 
+
+“In terms of slowing down the spread of this virus, it is crucial that everybody in the States restrict traveling and practice social distancing,” she continued. Despite making the safe choice, Lebrun has felt a large emotional impact. “I am lonely. I am depressed. I haven’t left my house in almost a week. I wish for nothing more than the sun and to see my friends. But this is where we are.”
+
+Additionally, international students had to adjust their Spring Break plans in response to the Academy’s initial delay and ultimate cancellation of Spring Term classes. In light of Asia’s numerous outbreaks, lower Emma Chen, along with ten other international students, planned to stay in the town of Exeter over break. However, after the announcement of online classes and an extended spring break, the eleven students decided to return home. 
+
+Chen lauded the Administration’s assistance with the extended stay. “Faculty members were extremely nice and organized a series of activities for us to do as we stayed in Exeter,” she said. “When the break extension was announced, Dean Moriarty made himself available for questions and tried to provide us with as much information as he could.” 
+
+For Chen and other international students temporarily staying in the U.S, the extended break posed a difficult question. “We eventually decided to go back home partly because of the extended break and partly because of the situation worsening in the U.S. [and] improving in China,” Chen said. 
+
+Nonetheless, Chen added that “considering how much uncertainty there is and how little we all know, I think the school has already done a wonderful job—I’m really grateful for and moved by what the faculty and administrators have done for us and our families.”
+
+Coordinating with the Dean’s Office and Campus Safety, Chen had the opportunity to collect some personal items from the dorms. Additional plans will be developed to allow more students to retrieve important items and educational materials.
+
+Although the Academy has taken measures to aid the changes, many students felt that the decision was not in the interest of everyone. 
+
+Lower Lekha Masoudi suspected that the extended break could put students at higher risk. “I honestly think it would’ve been better if the school made healthy students return immediately because, right now, I’m at a higher risk of being exposed to [coronavirus] since my dad is a doctor,” Masoudi said. “Being in the house for over a month in a city with a lot of cases isn’t going to improve my chances, or other people in cities like [New York], from getting it.” 
+
+Alternatively, Masoudi wished that the administration cancel Spring Term and have school resume during summer, in order to preserve the “dorm teas and performances which make Exeter so unique.”
+
+For senior Alisha Simmons, online classes present unique problems. “I honestly think students will slack off a lot with online classes,” Simmons said. “Part of the Exeter experience is its strict schedule, which is extremely stressful and anxiety inducing, but it also does force you to schedule homework time. At home, you have so much free time which makes it easier to procrastinate.”
+
+Seeing the actions of peer schools, lower Lila Busser believed it was necessary to transition to remote learning. “Even though I miss school, it’s really important that we made the decision to stay home especially after all of the other schools started doing it,” Busser said. “With 1,100 kids all in the same place, if even one of them had it, it would spread like wildfire.”
+
+Although remote learning has its inevitable difficulties, Math Instructor Gwynneth Coogan believes online classes provide students more time to think through homework problems and become independent learners. “[Students will] end up being more patient with themselves and find that they can solve problems that they originally did not think they could,” Coogan said.
+
+While he would prefer to be at school, lower Cyrus Braden understood the reasoning for cancellation. “I just think it’s a no brainer,” he said. “We can’t afford to jeopardize every member of our community for any reason. Online classes won’t be ideal, but they’re the only reasonable choice.” 
+
+Senior Sam Park hoped Exonians would embrace non sibi while away. “It's important to keep in mind that our response just be from a point of compassion and collective work towards protecting the most vulnerable and immunocompromised,” he said. “As Exonians, and as members of the world community, it's our responsibility right now to avoid going out, and to suppress the urge to hoard food and other supplies.”
+
+Despite the challenges posed by the coronavirus, Moriarty noted the importance of the Academy’s values. “We are committed to maintaining a healthy and vibrant and supportive community even if we are not physically together,” Moriarty said. “These are uncertain times, and we need to stick together with generous hearts, an adventurous spirit, and a renewed commitment to taking care of each other.”</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Students and Faculty Anticipate Spring Term Away From Exeter" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-yW-1fW">
+                                <rect key="frame" x="20" y="54" width="366" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="96R-G8-tE7"/>
                     </view>
                     <navigationItem key="navigationItem" id="icV-pI-YJW">
-                        <barButtonItem key="rightBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="s3Q-ri-poJ"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="s3Q-ri-poJ">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareNewsArticle:" destination="g0U-TB-fjq" id="5Bm-WM-gvx"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Favorite" image="star" catalog="system" id="ePc-W2-6YX"/>
+                            <barButtonItem title="Comments" image="message" catalog="system" id="re9-TO-2g9">
+                                <connections>
+                                    <segue destination="1AP-3G-Sy0" kind="show" id="tjd-km-4xe"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collect" destination="ePc-W2-6YX" id="L8f-WZ-0tr"/>
+                        <outlet property="comments" destination="re9-TO-2g9" id="jT1-QP-a9L"/>
+                        <outlet property="content" destination="pam-Em-uVY" id="paK-e6-SYZ"/>
+                        <outlet property="dateAndAuthor" destination="RXZ-7K-n4O" id="DZs-KR-SSw"/>
+                        <outlet property="share" destination="s3Q-ri-poJ" id="Ebx-aa-mRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFM-Ed-8Vp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986.9565217391305" y="-567.1875"/>
+            <point key="canvasLocation" x="2853.6231884057975" y="-545.08928571428567"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="V3m-Ge-0I9">
+            <objects>
+                <viewController id="1AP-3G-Sy0" customClass="CommentsViewController" customModule="The_Exonian" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tDm-cI-J2R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-Ki-HPj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP9-P1-zst">
+                                        <rect key="frame" x="48" y="33" width="50" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="guX-T4-RHk">
+                                        <rect key="frame" x="166" y="26" width="211" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-L5-vcq">
+                                        <rect key="frame" x="166" y="88" width="211" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhB-wg-KDc">
+                                        <rect key="frame" x="33" y="117" width="80" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87086243526584606" green="0.87086243526584606" blue="0.87086243526584606" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-eP-PmO">
+                                <rect key="frame" x="0.0" y="187" width="414" height="538"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="146" id="lb6-E8-w7s" customClass="CommentsTableViewCell" customModule="The_Exonian" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lb6-E8-w7s" id="WY0-Gq-Pvj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tony Cai:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-hi-dhP">
+                                                    <rect key="frame" x="20" y="11" width="71" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TqN-Yp-KLJ">
+                                                    <rect key="frame" x="42" y="34" width="361" height="76"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0b3-PY-HD3">
+                                                    <rect key="frame" x="337" y="110" width="33" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="0.83474737409999999" green="0.1935671568" blue="0.1607012451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="×5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-r9-beX">
+                                                    <rect key="frame" x="363" y="116" width="21" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2020-03-23 17:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-sz-eoG">
+                                                    <rect key="frame" x="49" y="120" width="104" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GWY-hP-tbQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Comments" id="yQq-VR-XE4">
+                        <barButtonItem key="backBarButtonItem" title="Article" id="cEd-ZR-czd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="comments" destination="MfY-eP-PmO" id="tPO-XS-7Sc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U54-jX-uli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3731.884057971015" y="-545.08928571428567"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="viZ-vW-RUR">
+            <objects>
+                <viewController id="pJw-N1-k8g" customClass="AccountViewController" customModule="The_Exonian" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2bH-9I-ydt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="H6n-gg-naa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Account" id="VJT-0v-16t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8JZ-8A-OL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="-1349"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9sS-mx-AZd">
             <objects>
                 <tabBarController id="5Eo-DM-47i" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sqt-td-A5T">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sqt-td-A5T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="kcY-Dd-L94" kind="relationship" relationship="viewControllers" id="JQJ-6g-xXy"/>
-                        <segue destination="inC-QE-2hy" kind="relationship" relationship="viewControllers" id="AlI-M2-4ne"/>
+                        <segue destination="gEv-mF-gKr" kind="relationship" relationship="viewControllers" id="AlI-M2-4ne"/>
+                        <segue destination="vax-3Q-bTx" kind="relationship" relationship="viewControllers" id="ydz-Hp-MZI"/>
+                        <segue destination="KTR-DI-OVT" kind="relationship" relationship="viewControllers" id="amM-TY-CFe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvP-tC-Yu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1043" y="-545"/>
+            <point key="canvasLocation" x="-133.33333333333334" y="-545.08928571428567"/>
         </scene>
-        <!--Item 1-->
+        <!--Explore-->
         <scene sceneID="frN-Db-qa2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kcY-Dd-L94" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="64I-ma-3UK"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="safari" catalog="system" landscapeImage="safari" largeContentSizeImage="safari" id="64I-ma-3UK">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIp-BD-vOc">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="hIp-BD-vOc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -145,10 +485,163 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jP-mV-tMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8.6956521739130448" y="-567.1875"/>
+            <point key="canvasLocation" x="961" y="-545"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="M0j-Gd-MkF">
+            <objects>
+                <viewController id="7aV-tw-82M" customClass="FavoriteViewController" customModule="The_Exonian" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8e3-EI-OiO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tkX-WD-IMS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="mGq-y7-8FZ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGq-y7-8FZ" id="uhC-aH-Uqw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-5r-C3Z">
+                                                    <rect key="frame" x="375" y="74" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="•••">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="moreOptions:" destination="7aV-tw-82M" eventType="touchUpInside" id="ua1-Vx-F1O"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xqi-2q-Nck"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite" id="yx4-g4-kLK"/>
+                    <connections>
+                        <outlet property="favoriteArticles" destination="tkX-WD-IMS" id="TXT-p6-Fe4"/>
+                        <outlet property="favoriteTable" destination="tkX-WD-IMS" id="qT8-GQ-cyV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufl-dh-nc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2450.7246376811595" y="-545.08928571428567"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="L24-NB-c4e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gEv-mF-gKr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" landscapeImage="magnifyingglass" largeContentSizeImage="magnifyingglass.circle" id="LZx-Cf-iM9">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Os7-gf-0Za">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="inC-QE-2hy" kind="relationship" relationship="rootViewController" id="bUK-f4-HfV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAd-HW-0o0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="279"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="B5J-bg-9dS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vax-3Q-bTx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite" image="bookmark" catalog="system" landscapeImage="bookmark" largeContentSizeImage="bookmark" id="SsH-hn-mGA">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="V4S-Rq-Z71">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7aV-tw-82M" kind="relationship" relationship="rootViewController" id="tr9-sn-oGl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OxD-fK-Zg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="-545"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="EFZ-i9-VQr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KTR-DI-OVT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" landscapeImage="person" largeContentSizeImage="person" id="Oxp-gd-BSP">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="yeT-gH-VOd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pJw-N1-k8g" kind="relationship" relationship="rootViewController" id="T8A-3K-oxe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4S-SO-mur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-1349"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark" catalog="system" width="56" height="64"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass.circle" catalog="system" width="64" height="60"/>
+        <image name="message" catalog="system" width="64" height="56"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="safari" catalog="system" width="64" height="60"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="star" catalog="system" width="64" height="58"/>
     </resources>
 </document>

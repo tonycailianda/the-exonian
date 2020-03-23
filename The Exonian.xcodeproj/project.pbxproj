@@ -15,6 +15,15 @@
 		C83CA6632428288A00314B79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83CA6612428288A00314B79 /* LaunchScreen.storyboard */; };
 		C83CA66B24282F2000314B79 /* TopNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA66A24282F2000314B79 /* TopNewsViewController.swift */; };
 		C83CA66D2428349F00314B79 /* TopNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA66C2428349F00314B79 /* TopNewsCell.swift */; };
+		C83CA66F24284B4400314B79 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C83CA66E24284B4400314B79 /* logo.png */; };
+		C83CA673242865B300314B79 /* NewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA672242865B300314B79 /* NewsArticleViewController.swift */; };
+		C83CA6752428694400314B79 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6742428694400314B79 /* AccountViewController.swift */; };
+		C83CA6772428695000314B79 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6762428695000314B79 /* FavoriteViewController.swift */; };
+		C83CA6792428696500314B79 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6782428696500314B79 /* SearchViewController.swift */; };
+		C83CA67B2428799B00314B79 /* favoriteArticleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67A2428799B00314B79 /* favoriteArticleCellTableViewCell.swift */; };
+		C83CA67D242885D200314B79 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67C242885D200314B79 /* CommentsViewController.swift */; };
+		C83CA67F2428874B00314B79 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67E2428874B00314B79 /* CommentsTableViewCell.swift */; };
+		C83CA6812428897D00314B79 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6802428897D00314B79 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		C83CA6642428288A00314B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83CA66A24282F2000314B79 /* TopNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsViewController.swift; sourceTree = "<group>"; };
 		C83CA66C2428349F00314B79 /* TopNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsCell.swift; sourceTree = "<group>"; };
+		C83CA66E24284B4400314B79 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../logo.png; sourceTree = "<group>"; };
+		C83CA672242865B300314B79 /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
+		C83CA6742428694400314B79 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C83CA6762428695000314B79 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		C83CA6782428696500314B79 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C83CA67A2428799B00314B79 /* favoriteArticleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteArticleCellTableViewCell.swift; sourceTree = "<group>"; };
+		C83CA67C242885D200314B79 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		C83CA67E2428874B00314B79 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		C83CA6802428897D00314B79 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C83CA6562428288900314B79 /* AppDelegate.swift */,
+				C83CA66E24284B4400314B79 /* logo.png */,
 				C83CA6582428288900314B79 /* SceneDelegate.swift */,
 				C83CA65A2428288900314B79 /* ViewController.swift */,
 				C83CA65C2428288900314B79 /* Main.storyboard */,
@@ -69,6 +88,14 @@
 				C83CA6642428288A00314B79 /* Info.plist */,
 				C83CA66A24282F2000314B79 /* TopNewsViewController.swift */,
 				C83CA66C2428349F00314B79 /* TopNewsCell.swift */,
+				C83CA672242865B300314B79 /* NewsArticleViewController.swift */,
+				C83CA6742428694400314B79 /* AccountViewController.swift */,
+				C83CA6762428695000314B79 /* FavoriteViewController.swift */,
+				C83CA67A2428799B00314B79 /* favoriteArticleCellTableViewCell.swift */,
+				C83CA6782428696500314B79 /* SearchViewController.swift */,
+				C83CA67C242885D200314B79 /* CommentsViewController.swift */,
+				C83CA67E2428874B00314B79 /* CommentsTableViewCell.swift */,
+				C83CA6802428897D00314B79 /* SearchTableViewCell.swift */,
 			);
 			path = "The Exonian";
 			sourceTree = "<group>";
@@ -131,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83CA66F24284B4400314B79 /* logo.png in Resources */,
 				C83CA6632428288A00314B79 /* LaunchScreen.storyboard in Resources */,
 				C83CA6602428288A00314B79 /* Assets.xcassets in Resources */,
 				C83CA65E2428288900314B79 /* Main.storyboard in Resources */,
@@ -146,8 +174,16 @@
 			files = (
 				C83CA65B2428288900314B79 /* ViewController.swift in Sources */,
 				C83CA66D2428349F00314B79 /* TopNewsCell.swift in Sources */,
+				C83CA67D242885D200314B79 /* CommentsViewController.swift in Sources */,
+				C83CA6752428694400314B79 /* AccountViewController.swift in Sources */,
+				C83CA6792428696500314B79 /* SearchViewController.swift in Sources */,
+				C83CA673242865B300314B79 /* NewsArticleViewController.swift in Sources */,
 				C83CA66B24282F2000314B79 /* TopNewsViewController.swift in Sources */,
+				C83CA67F2428874B00314B79 /* CommentsTableViewCell.swift in Sources */,
+				C83CA6812428897D00314B79 /* SearchTableViewCell.swift in Sources */,
 				C83CA6572428288900314B79 /* AppDelegate.swift in Sources */,
+				C83CA6772428695000314B79 /* FavoriteViewController.swift in Sources */,
+				C83CA67B2428799B00314B79 /* favoriteArticleCellTableViewCell.swift in Sources */,
 				C83CA6592428288900314B79 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,10 @@ class TopNewsCell: UITableViewCell {
 
     @IBOutlet weak var topNewsImage: UIImageView!
     
-
+    @IBOutlet weak var collect: UIButton!
+    
+    @IBOutlet weak var share: UIButton!
+    
     @IBOutlet weak var topNewsText: UITextView!
     
     
