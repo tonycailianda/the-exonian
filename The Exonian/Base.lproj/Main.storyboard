@@ -72,6 +72,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchResultBrief" destination="jfl-Qf-x2H" id="xCk-5f-8HZ"/>
+                                            <outlet property="searchResultDate" destination="r6A-sj-TmZ" id="ePa-n9-lBn"/>
+                                            <outlet property="searchResultTitle" destination="Jfh-5E-3od" id="I5b-Zk-XRi"/>
+                                            <segue destination="g0U-TB-fjq" kind="show" id="Jag-NC-khI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -89,6 +95,9 @@
                     <navigationItem key="navigationItem" title="Search" id="8md-qk-XId"/>
                     <connections>
                         <outlet property="SearchBar" destination="Xwl-Ag-IYY" id="yu3-RQ-svz"/>
+                        <outlet property="clearSearchHistory" destination="twx-pB-BOl" id="KIn-Gq-s0l"/>
+                        <outlet property="searchResultCount" destination="s4p-v3-wcV" id="CCj-ZA-N0l"/>
+                        <outlet property="searchResultTable" destination="mhE-e0-n2R" id="B72-Sz-APT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgr-C8-kgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="431" id="tQD-T1-pJF" customClass="TopNewsCell" customModule="The_Exonian" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="topNewsCell" rowHeight="431" id="tQD-T1-pJF" customClass="TopNewsCell" customModule="The_Exonian" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="431"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tQD-T1-pJF" id="kkZ-3y-2b5">
@@ -198,7 +207,7 @@
                                 <rect key="frame" x="28" y="183" width="366" height="3699"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">In response to COVID-19 pandemic, Principal William Rawson emailed a video announcement cancelling all on-campus classes for the Spring Term. All courses will be delivered online and students will receive a pass/no pass evaluation for their work. 
+                                <string key="text">In response to COVID-19 pandemic, Principal William Rawson emailed a video announcement cancelling all on-campus classes for the Spring Term. All courses will be delivered online and students will receive a pass/no pass evaluation for their work. 
 
 According to Rawson’s video, seniors will still assemble on campus in June for commencement. Regardless of whether students can ultimately return to campus, the senior class will graduate on time. Rawson allowed for the possibility of students returning to campus if the global health crisis improves.
 
@@ -258,7 +267,7 @@ While he would prefer to be at school, lower Cyrus Braden understood the reasoni
 
 Senior Sam Park hoped Exonians would embrace non sibi while away. “It's important to keep in mind that our response just be from a point of compassion and collective work towards protecting the most vulnerable and immunocompromised,” he said. “As Exonians, and as members of the world community, it's our responsibility right now to avoid going out, and to suppress the urge to hoard food and other supplies.”
 
-Despite the challenges posed by the coronavirus, Moriarty noted the importance of the Academy’s values. “We are committed to maintaining a healthy and vibrant and supportive community even if we are not physically together,” Moriarty said. “These are uncertain times, and we need to stick together with generous hearts, an adventurous spirit, and a renewed commitment to taking care of each other.”</mutableString>
+Despite the challenges posed by the coronavirus, Moriarty noted the importance of the Academy’s values. “We are committed to maintaining a healthy and vibrant and supportive community even if we are not physically together,” Moriarty said. “These are uncertain times, and we need to stick together with generous hearts, an adventurous spirit, and a renewed commitment to taking care of each other.”</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -312,7 +321,7 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-Ki-HPj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP9-P1-zst">
@@ -343,11 +352,16 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3t-4J-UIF">
+                                        <rect key="frame" x="366" y="181" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87086243526584606" green="0.87086243526584606" blue="0.87086243526584606" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-eP-PmO">
-                                <rect key="frame" x="0.0" y="187" width="414" height="538"/>
+                                <rect key="frame" x="0.0" y="211" width="414" height="514"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -397,6 +411,13 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentContent" destination="TqN-Yp-KLJ" id="q0k-Hp-2bv"/>
+                                            <outlet property="commentDate" destination="6ZL-sz-eoG" id="p9H-qB-F9c"/>
+                                            <outlet property="commentUsername" destination="kCu-hi-dhP" id="jlj-ib-cEE"/>
+                                            <outlet property="likeButton" destination="0b3-PY-HD3" id="uHi-nY-jkd"/>
+                                            <outlet property="likeCount" destination="Na1-r9-beX" id="KKf-nK-qec"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -408,7 +429,9 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                         <barButtonItem key="backBarButtonItem" title="Article" id="cEd-ZR-czd"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="commentInput" destination="z9L-L5-vcq" id="0Vv-OJ-567"/>
                         <outlet property="comments" destination="MfY-eP-PmO" id="tPO-XS-7Sc"/>
+                        <outlet property="nameInput" destination="guX-T4-RHk" id="7qb-jM-50d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U54-jX-uli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -422,14 +445,44 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                     <view key="view" contentMode="scaleToFill" id="2bH-9I-ydt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUA-1M-vjZ">
+                                <rect key="frame" x="0.0" y="556" width="414" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87312599043915751" green="0.87619497926220846" blue="0.88540194573136155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3wz-mg-yu6" kind="show" id="W8A-Ro-AZ2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pDE-6k-Ob3">
+                                <rect key="frame" x="87" y="122.5" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tony Cai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCX-db-dV5">
+                                <rect key="frame" x="148" y="409.5" width="118" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="H6n-gg-naa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="VJT-0v-16t"/>
+                    <connections>
+                        <outlet property="accountName" destination="hCX-db-dV5" id="0Or-FK-vRS"/>
+                        <outlet property="accountProfile" destination="pDE-6k-Ob3" id="gmV-CU-Soc"/>
+                        <outlet property="accountSignout" destination="cUA-1M-vjZ" id="Hxq-eq-BSB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JZ-8A-OL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="-1349"/>
+            <point key="canvasLocation" x="873.91304347826099" y="-1349.3303571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9sS-mx-AZd">
@@ -500,25 +553,45 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="mGq-y7-8FZ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="107"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="mre-Yb-vil" customClass="favoriteArticleCellTableViewCell" customModule="The_Exonian" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGq-y7-8FZ" id="uhC-aH-Uqw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mre-Yb-vil" id="JVt-n8-0DJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-5r-C3Z">
-                                                    <rect key="frame" x="375" y="74" width="30" height="30"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvj-e9-1iz">
+                                                    <rect key="frame" x="20" y="11" width="114" height="93"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="•••">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="moreOptions:" destination="7aV-tw-82M" eventType="touchUpInside" id="ua1-Vx-F1O"/>
-                                                    </connections>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Moriarty Unveils a New Spring Term Schedule" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-rD-LSz">
+                                                    <rect key="frame" x="148" y="18" width="258" height="67"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mar 19, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w28-4i-wQg">
+                                                    <rect key="frame" x="148" y="87" width="85" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR6-Zu-SkZ">
+                                                    <rect key="frame" x="376" y="80" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="•••"/>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteArticleImage" destination="rvj-e9-1iz" id="eBF-5D-5MR"/>
+                                            <outlet property="favoriteArticleTitle" destination="b4f-rD-LSz" id="R15-1r-Wdz"/>
+                                            <outlet property="favoriteMoreOptions" destination="OR6-Zu-SkZ" id="Fde-MN-bea"/>
+                                            <segue destination="g0U-TB-fjq" kind="show" id="EsR-oH-VIo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -534,7 +607,7 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufl-dh-nc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2450.7246376811595" y="-545.08928571428567"/>
+            <point key="canvasLocation" x="-2441" y="-1082"/>
         </scene>
         <!--Search-->
         <scene sceneID="L24-NB-c4e">
@@ -632,10 +705,73 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
             </objects>
             <point key="canvasLocation" x="19" y="-1349"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="J7p-GE-O72">
+            <objects>
+                <viewController title="Login" id="3wz-mg-yu6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3aC-pF-GdT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-86-evX">
+                                <rect key="frame" x="87" y="108" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-1q-y9t">
+                                <rect key="frame" x="57" y="295" width="65" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxQ-52-kvM">
+                                <rect key="frame" x="87" y="327" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-D1-Qrd">
+                                <rect key="frame" x="57" y="403" width="98" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifV-6v-hTq">
+                                <rect key="frame" x="87" y="438" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddv-3k-PG3">
+                                <rect key="frame" x="154" y="528" width="106" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-wY-En1">
+                                <rect key="frame" x="180" y="583" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hXo-6s-hG8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wy5-T3-epO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKa-6F-mfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.6376811594205" y="-1349.3303571428571"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="logo.png" width="1320" height="552"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="magnifyingglass.circle" catalog="system" width="64" height="60"/>
         <image name="message" catalog="system" width="64" height="56"/>
@@ -644,4 +780,7 @@ Despite the challenges posed by the coronavirus, Moriarty noted the importance o
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
         <image name="star" catalog="system" width="64" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uma-cw-ICv"/>
+    </inferredMetricsTieBreakers>
 </document>

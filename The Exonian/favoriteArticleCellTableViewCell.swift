@@ -8,13 +8,19 @@
 
 import UIKit
 
-class favoriteArticleCellTableViewCell: UITableViewCell {
+class FavoriteArticleCellTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    @IBOutlet weak var favoriteArticleImage: UIImageView!
+    
+    
+    @IBOutlet weak var favoriteArticleTitle: UITextView!
+    
+    @IBOutlet weak var favoriteMoreOptions: UIButton!
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {

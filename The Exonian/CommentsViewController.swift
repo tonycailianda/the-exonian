@@ -13,6 +13,12 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var comments: UITableView!
     
+    @IBOutlet weak var nameInput: UITextField!
+    
+    @IBOutlet weak var commentInput: UITextView!
+    
+    //should this be scrolled up and disappeared when the user scrolls up the comment?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }

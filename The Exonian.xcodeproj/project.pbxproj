@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80D0A347F1E03926202C87F9 /* Pods_The_Exonian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289148E741621CC2DC725625 /* Pods_The_Exonian.framework */; };
+		C81A3402242930B0000434D0 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81A3401242930B0000434D0 /* LoginPageViewController.swift */; };
+		C81A340424293300000434D0 /* The Exonian LOGO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81A340324293300000434D0 /* The Exonian LOGO.jpg */; };
+		C81A3406242969C2000434D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C81A3405242969C2000434D0 /* GoogleService-Info.plist */; };
+		C81EA8342429709E002FAF1C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EA8332429709E002FAF1C /* Article.swift */; };
 		C83CA6572428288900314B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6562428288900314B79 /* AppDelegate.swift */; };
 		C83CA6592428288900314B79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6582428288900314B79 /* SceneDelegate.swift */; };
 		C83CA65B2428288900314B79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA65A2428288900314B79 /* ViewController.swift */; };
@@ -20,13 +25,20 @@
 		C83CA6752428694400314B79 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6742428694400314B79 /* AccountViewController.swift */; };
 		C83CA6772428695000314B79 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6762428695000314B79 /* FavoriteViewController.swift */; };
 		C83CA6792428696500314B79 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6782428696500314B79 /* SearchViewController.swift */; };
-		C83CA67B2428799B00314B79 /* favoriteArticleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67A2428799B00314B79 /* favoriteArticleCellTableViewCell.swift */; };
+		C83CA67B2428799B00314B79 /* FavoriteArticleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67A2428799B00314B79 /* FavoriteArticleCellTableViewCell.swift */; };
 		C83CA67D242885D200314B79 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67C242885D200314B79 /* CommentsViewController.swift */; };
 		C83CA67F2428874B00314B79 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA67E2428874B00314B79 /* CommentsTableViewCell.swift */; };
 		C83CA6812428897D00314B79 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6802428897D00314B79 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289148E741621CC2DC725625 /* Pods_The_Exonian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Exonian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96E2BB850F1BD90AEBCADE9 /* Pods-The Exonian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Exonian.debug.xcconfig"; path = "Target Support Files/Pods-The Exonian/Pods-The Exonian.debug.xcconfig"; sourceTree = "<group>"; };
+		C2E02116E4CF50D8202D4DDF /* Pods-The Exonian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Exonian.release.xcconfig"; path = "Target Support Files/Pods-The Exonian/Pods-The Exonian.release.xcconfig"; sourceTree = "<group>"; };
+		C81A3401242930B0000434D0 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		C81A340324293300000434D0 /* The Exonian LOGO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "The Exonian LOGO.jpg"; path = "../../../The Exonian LOGO.jpg"; sourceTree = "<group>"; };
+		C81A3405242969C2000434D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C81EA8332429709E002FAF1C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C83CA6532428288900314B79 /* The Exonian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Exonian.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83CA6562428288900314B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83CA6582428288900314B79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +54,7 @@
 		C83CA6742428694400314B79 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		C83CA6762428695000314B79 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		C83CA6782428696500314B79 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		C83CA67A2428799B00314B79 /* favoriteArticleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteArticleCellTableViewCell.swift; sourceTree = "<group>"; };
+		C83CA67A2428799B00314B79 /* FavoriteArticleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteArticleCellTableViewCell.swift; sourceTree = "<group>"; };
 		C83CA67C242885D200314B79 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		C83CA67E2428874B00314B79 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		C83CA6802428897D00314B79 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -53,17 +65,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D0A347F1E03926202C87F9 /* Pods_The_Exonian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5457E8539DBEB1F1CB823C37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A96E2BB850F1BD90AEBCADE9 /* Pods-The Exonian.debug.xcconfig */,
+				C2E02116E4CF50D8202D4DDF /* Pods-The Exonian.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92812BBA3AF401807E310EC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				289148E741621CC2DC725625 /* Pods_The_Exonian.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C81EA8312429701D002FAF1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C81EA8332429709E002FAF1C /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C81EA83224297028002FAF1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C83CA6802428897D00314B79 /* SearchTableViewCell.swift */,
+				C81A3401242930B0000434D0 /* LoginPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C83CA64A2428288900314B79 = {
 			isa = PBXGroup;
 			children = (
 				C83CA6552428288900314B79 /* The Exonian */,
 				C83CA6542428288900314B79 /* Products */,
+				5457E8539DBEB1F1CB823C37 /* Pods */,
+				92812BBA3AF401807E310EC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +127,10 @@
 		C83CA6552428288900314B79 /* The Exonian */ = {
 			isa = PBXGroup;
 			children = (
+				C81EA83224297028002FAF1C /* Controller */,
+				C81EA8312429701D002FAF1C /* Model */,
+				C81A3405242969C2000434D0 /* GoogleService-Info.plist */,
+				C81A340324293300000434D0 /* The Exonian LOGO.jpg */,
 				C83CA6562428288900314B79 /* AppDelegate.swift */,
 				C83CA66E24284B4400314B79 /* logo.png */,
 				C83CA6582428288900314B79 /* SceneDelegate.swift */,
@@ -91,11 +144,10 @@
 				C83CA672242865B300314B79 /* NewsArticleViewController.swift */,
 				C83CA6742428694400314B79 /* AccountViewController.swift */,
 				C83CA6762428695000314B79 /* FavoriteViewController.swift */,
-				C83CA67A2428799B00314B79 /* favoriteArticleCellTableViewCell.swift */,
+				C83CA67A2428799B00314B79 /* FavoriteArticleCellTableViewCell.swift */,
 				C83CA6782428696500314B79 /* SearchViewController.swift */,
 				C83CA67C242885D200314B79 /* CommentsViewController.swift */,
 				C83CA67E2428874B00314B79 /* CommentsTableViewCell.swift */,
-				C83CA6802428897D00314B79 /* SearchTableViewCell.swift */,
 			);
 			path = "The Exonian";
 			sourceTree = "<group>";
@@ -107,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C83CA6672428288A00314B79 /* Build configuration list for PBXNativeTarget "The Exonian" */;
 			buildPhases = (
+				3A93B67AAA43FBF998870D0C /* [CP] Check Pods Manifest.lock */,
 				C83CA64F2428288900314B79 /* Sources */,
 				C83CA6502428288900314B79 /* Frameworks */,
 				C83CA6512428288900314B79 /* Resources */,
+				1881C03FF80CDB6EE3B113BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,11 +215,55 @@
 				C83CA66F24284B4400314B79 /* logo.png in Resources */,
 				C83CA6632428288A00314B79 /* LaunchScreen.storyboard in Resources */,
 				C83CA6602428288A00314B79 /* Assets.xcassets in Resources */,
+				C81A340424293300000434D0 /* The Exonian LOGO.jpg in Resources */,
 				C83CA65E2428288900314B79 /* Main.storyboard in Resources */,
+				C81A3406242969C2000434D0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1881C03FF80CDB6EE3B113BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Exonian/Pods-The Exonian-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Exonian/Pods-The Exonian-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Exonian/Pods-The Exonian-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A93B67AAA43FBF998870D0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Exonian-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C83CA64F2428288900314B79 /* Sources */ = {
@@ -177,14 +275,16 @@
 				C83CA67D242885D200314B79 /* CommentsViewController.swift in Sources */,
 				C83CA6752428694400314B79 /* AccountViewController.swift in Sources */,
 				C83CA6792428696500314B79 /* SearchViewController.swift in Sources */,
+				C81A3402242930B0000434D0 /* LoginPageViewController.swift in Sources */,
 				C83CA673242865B300314B79 /* NewsArticleViewController.swift in Sources */,
 				C83CA66B24282F2000314B79 /* TopNewsViewController.swift in Sources */,
 				C83CA67F2428874B00314B79 /* CommentsTableViewCell.swift in Sources */,
 				C83CA6812428897D00314B79 /* SearchTableViewCell.swift in Sources */,
 				C83CA6572428288900314B79 /* AppDelegate.swift in Sources */,
 				C83CA6772428695000314B79 /* FavoriteViewController.swift in Sources */,
-				C83CA67B2428799B00314B79 /* favoriteArticleCellTableViewCell.swift in Sources */,
+				C83CA67B2428799B00314B79 /* FavoriteArticleCellTableViewCell.swift in Sources */,
 				C83CA6592428288900314B79 /* SceneDelegate.swift in Sources */,
+				C81EA8342429709E002FAF1C /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +426,7 @@
 		};
 		C83CA6682428288A00314B79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A96E2BB850F1BD90AEBCADE9 /* Pods-The Exonian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +445,7 @@
 		};
 		C83CA6692428288A00314B79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E02116E4CF50D8202D4DDF /* Pods-The Exonian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

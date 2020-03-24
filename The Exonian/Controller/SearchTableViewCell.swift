@@ -10,6 +10,13 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var searchResultTitle: UILabel!
+    
+    @IBOutlet weak var searchResultBrief: UITextView!
+    
+    @IBOutlet weak var searchResultDate: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,7 +25,5 @@ class SearchTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-
+        }
 }

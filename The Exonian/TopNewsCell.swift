@@ -18,5 +18,7 @@ class TopNewsCell: UITableViewCell {
     
     @IBOutlet weak var topNewsText: UITextView!
     
+    var indexPath : IndexPath?
+    
     
 }

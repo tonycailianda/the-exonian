@@ -9,6 +9,16 @@
 import UIKit
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
+    
+    @IBOutlet weak var searchResultCount: UILabel!
+    
+    @IBOutlet weak var clearSearchHistory: UIButton!
+    
+    @IBOutlet weak var searchResultTable: UITableView!
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
