@@ -11,6 +11,9 @@
 		A36837992429D9D4005FDAEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A36837982429D9D4005FDAEF /* GoogleService-Info.plist */; };
 		A368379B2429D9DB005FDAEF /* The Exonian LOGO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A368379A2429D9DB005FDAEF /* The Exonian LOGO.jpg */; };
 		A368379D2429D9E3005FDAEF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A368379C2429D9E3005FDAEF /* logo.png */; };
+		A3B7D42E2439203500C1CCD0 /* AuthenticationHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B7D42D2439203500C1CCD0 /* AuthenticationHandlingViewController.swift */; };
+		C80FE469243A8B0C005EF409 /* Mermaid Swash Caps.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C80FE467243A8B0C005EF409 /* Mermaid Swash Caps.ttf */; };
+		C80FE46A243A8B0C005EF409 /* Mermaid1001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C80FE468243A8B0C005EF409 /* Mermaid1001.ttf */; };
 		C81A3402242930B0000434D0 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81A3401242930B0000434D0 /* LoginPageViewController.swift */; };
 		C81EA8342429709E002FAF1C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EA8332429709E002FAF1C /* Article.swift */; };
 		C83CA6572428288900314B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83CA6562428288900314B79 /* AppDelegate.swift */; };
@@ -37,8 +40,11 @@
 		A36837982429D9D4005FDAEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A368379A2429D9DB005FDAEF /* The Exonian LOGO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Exonian LOGO.jpg"; sourceTree = "<group>"; };
 		A368379C2429D9E3005FDAEF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A3B7D42D2439203500C1CCD0 /* AuthenticationHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHandlingViewController.swift; sourceTree = "<group>"; };
 		A96E2BB850F1BD90AEBCADE9 /* Pods-The Exonian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Exonian.debug.xcconfig"; path = "Target Support Files/Pods-The Exonian/Pods-The Exonian.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E02116E4CF50D8202D4DDF /* Pods-The Exonian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Exonian.release.xcconfig"; path = "Target Support Files/Pods-The Exonian/Pods-The Exonian.release.xcconfig"; sourceTree = "<group>"; };
+		C80FE467243A8B0C005EF409 /* Mermaid Swash Caps.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mermaid Swash Caps.ttf"; sourceTree = "<group>"; };
+		C80FE468243A8B0C005EF409 /* Mermaid1001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mermaid1001.ttf; sourceTree = "<group>"; };
 		C81A3401242930B0000434D0 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		C81EA8332429709E002FAF1C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C83CA6532428288900314B79 /* The Exonian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Exonian.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +97,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C80FE464243A88E3005EF409 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C80FE467243A8B0C005EF409 /* Mermaid Swash Caps.ttf */,
+				C80FE468243A8B0C005EF409 /* Mermaid1001.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C81EA8312429701D002FAF1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +129,7 @@
 				C83CA67C242885D200314B79 /* CommentsViewController.swift */,
 				C83CA66A24282F2000314B79 /* TopNewsViewController.swift */,
 				C81A3401242930B0000434D0 /* LoginPageViewController.swift */,
+				A3B7D42D2439203500C1CCD0 /* AuthenticationHandlingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +155,7 @@
 		C83CA6552428288900314B79 /* The Exonian */ = {
 			isa = PBXGroup;
 			children = (
+				C80FE464243A88E3005EF409 /* Fonts */,
 				A368379C2429D9E3005FDAEF /* logo.png */,
 				A368379A2429D9DB005FDAEF /* The Exonian LOGO.jpg */,
 				A36837982429D9D4005FDAEF /* GoogleService-Info.plist */,
@@ -218,6 +235,8 @@
 				C83CA6632428288A00314B79 /* LaunchScreen.storyboard in Resources */,
 				A36837992429D9D4005FDAEF /* GoogleService-Info.plist in Resources */,
 				A368379D2429D9E3005FDAEF /* logo.png in Resources */,
+				C80FE469243A8B0C005EF409 /* Mermaid Swash Caps.ttf in Resources */,
+				C80FE46A243A8B0C005EF409 /* Mermaid1001.ttf in Resources */,
 				C83CA6602428288A00314B79 /* Assets.xcassets in Resources */,
 				A368379B2429D9DB005FDAEF /* The Exonian LOGO.jpg in Resources */,
 				C83CA65E2428288900314B79 /* Main.storyboard in Resources */,
@@ -282,6 +301,7 @@
 				C83CA673242865B300314B79 /* NewsArticleViewController.swift in Sources */,
 				C83CA66B24282F2000314B79 /* TopNewsViewController.swift in Sources */,
 				C83CA67F2428874B00314B79 /* CommentsTableViewCell.swift in Sources */,
+				A3B7D42E2439203500C1CCD0 /* AuthenticationHandlingViewController.swift in Sources */,
 				C83CA6812428897D00314B79 /* SearchTableViewCell.swift in Sources */,
 				C83CA6572428288900314B79 /* AppDelegate.swift in Sources */,
 				C83CA6772428695000314B79 /* FavoriteViewController.swift in Sources */,

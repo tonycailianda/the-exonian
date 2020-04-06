@@ -9,7 +9,9 @@
 import Foundation
 import Firebase
 
-class Article {
+class Article: NSObject, NSCoding {
+    
+    
     
     let ref : DatabaseReference?
     var author : String = ""
@@ -35,7 +37,6 @@ class Article {
     
     
     init?(snapshot:DataSnapshot) {
-        print("hi")
         guard
             let value = snapshot.value as? [String:AnyObject],
             let fAuthor = value["Author"] as? String,
@@ -43,9 +44,9 @@ class Article {
             let fTitle = value["Title"] as? String,
             let fCatalog = value["Catalog"] as? String,
             let fContent = value["Content"] as? String,
+            let fImage = value["ImageURL"] as? String,
             let fId = value["Id"] as? String
             else{
-                print("wowk")
                 return nil
         }
         
@@ -55,10 +56,42 @@ class Article {
         self.title = fTitle
         self.catalog = fCatalog
         self.content = fContent
+        self.imageURL = fImage
         self.id = fId
-          print("wow")
+    }
+    func encode(with coder: NSCoder) {
+        coder.encode(self.author, forKey: "author")
+        coder.encode(self.date, forKey: "date")
+        coder.encode(self.title, forKey: "title")
+        coder.encode(self.catalog, forKey: "catalog")
+        coder.encode(self.content, forKey: "content")
+        coder.encode(self.like, forKey: "like")
+        coder.encode(self.imageURL, forKey: "imageURL")
+        coder.encode(self.id, forKey: "id")
     }
     
+    required convenience init?(coder decoder: NSCoder) {
+        guard let author = decoder.decodeObject(forKey: "author") as? String,
+            let date = decoder.decodeObject(forKey: "date") as? String,
+            let title = decoder.decodeObject(forKey: "title") as? String,
+            let catalog = decoder.decodeObject(forKey: "catalog") as? String,
+            let content = decoder.decodeObject(forKey: "content") as? String,
+            let like = decoder.decodeInteger(forKey: "like") as? Int,
+            let imageURL = decoder.decodeObject(forKey: "imageURL") as? String,
+            let id = decoder.decodeObject(forKey: "id") as? String
+            else { return nil }
+        
+        self.init(
+            author : author ,
+            date : date ,
+            title : title ,
+            catalog : catalog,
+            content : content,
+            like : like,
+            imageURL : imageURL,
+            id : id
+        )
+    }
     func toAnyObject() -> Any{
         return[
             "Author" : author,
@@ -72,3 +105,4 @@ class Article {
         ]
     }
 }
+
